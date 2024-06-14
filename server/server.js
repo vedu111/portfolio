@@ -18,7 +18,9 @@ app.post('/api/messages', async (req, res) => {
   const { name, email, message } = req.body;
 
   try {
-    const newMessage = new Message({ name, email, message });
+    // const newMessage = new Message({ name, email, message });
+    const mes = mongoose.model(vedant , Message);  
+    const newMessage = new mes({ name, email, message });
     await newMessage.save();
     res.status(201).json(newMessage);
   } catch (error) {
