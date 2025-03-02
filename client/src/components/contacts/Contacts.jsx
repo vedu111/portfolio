@@ -6,39 +6,16 @@ const Contacts = () => {
 
   const form = useRef();
 
-  const sendMessage = async (e) => {
+  const sendMessage = (e) => {
     e.preventDefault();
-
     const formData = new FormData(form.current);
-    const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      message: formData.get('message')
-    };
-
-    try {
-      const response = await fetch('http://localhost:5000/api/messages', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      });
-
-      if (response.ok) {
-        alert('Message sent successfully');
-        e.target.reset();
-      } else {
-        alert('Failed to send message');
-      }
-    } catch (error) {
-      alert('Error: ' + error.message);
-    }
+    const mailtoLink = `mailto:dagadkhairvedant@gmail.com?subject=Message from ${formData.get('name')}&body=${formData.get('message')} (${formData.get('email')})`;
+    window.location.href = mailtoLink;
   };
 
   return (
     <section id='contacts'>
-      <h5>Get in touch</h5>
+      <h5>Get in Touch</h5>
       <h2>Contact Me</h2>
 
       <div className="container contact__container">

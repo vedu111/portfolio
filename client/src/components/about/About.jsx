@@ -32,7 +32,7 @@ const About = () => {
               <article className='about__card'>
                   <BsBookmarkStar className='about__icon'/>
                   <h5>Current GPA</h5>
-                  <small>9.45</small>
+                  <small>9.65/10</small>
               </article>
 
               <article className='about__card'>
@@ -40,8 +40,8 @@ const About = () => {
                   <h5>Domains</h5>
                   <small>
                     <ul>
-                      <li>Net Centric</li>
-                      <li>Web Applications</li>
+                      <li>Software Development</li>
+                      <li>Algorithms and Data Structures</li>
                     </ul>
                   </small>
               </article>
@@ -50,11 +50,7 @@ const About = () => {
 
             </div>
             <p>
-                    I'm a <b>Software Engineering Undergradute</b> at the University of Mumbai. 
-                    I'm an enthusiastic and driven Software Engineering student seeking a challenging internship opportunity to apply 
-                    and expand my technical skills. 
-                    With a strong academic foundation in software engineering and hands-on experience in various programming languages,
-                    I am eager to contribute to innovative projects and learn from experienced professionals in the industry. I am a quick learner who is always ready to face challenges.
+                    I'm a <b>Software Engineering Undergradute</b> at the University of Mumbai with a passion for technology and innovation. I thrive on solving complex problems and am always eager to learn and grow. My strong academic foundation, combined with hands-on experience in diverse programming languages and technologies, equips me to contribute effectively to real-world projects. I am highly motivated, adaptable, and excited to collaborate with industry professionals to develop impactful solutions and gain valuable experience through a challenging opportunity.
                     
             </p>
 

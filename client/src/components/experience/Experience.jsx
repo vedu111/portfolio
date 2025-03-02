@@ -1,96 +1,63 @@
-import React from 'react'
-import './experience.css'
-import {BsFillPatchCheckFill} from 'react-icons/bs'
+import React from 'react';
+import './experience.css';
+import { BsFillPatchCheckFill } from 'react-icons/bs';
 
 const Experience = () => {
   return (
     <section id='experience'>
+      <h5>The Skills I Have</h5>
+      <h2>My SkillSet</h2>
 
-      <h5>The skills I have</h5>
-      <h2>My Experience</h2>
-
-      <div className="container experience__container">
-
-        <div className="experience__frontend">
-            <h3>Frontend Development</h3>
-
-            <div className="experience__content">
-
-              <article className='experience__details'>
-                <BsFillPatchCheckFill className='experience__details-icon'/>
+      <div className='container experience__container'>
+        <div className='experience__frontend'>
+          <h3>Frontend Development</h3>
+          <div className='experience__content'>
+            {[
+              { tech: 'HTML', level: 'Experienced' },
+              { tech: 'CSS', level: 'Intermediate' },
+              { tech: 'JavaScript', level: 'Intermediate' },
+              { tech: 'Bootstrap', level: 'Intermediate' },
+              { tech: 'Tailwind CSS', level: 'Intermediate' },
+              { tech: 'React.js', level: 'Beginner' },
+              { tech: 'Next.js', level: 'Beginner' }
+            ].map(({ tech, level }) => (
+              <article className='experience__details' key={tech}>
+                <BsFillPatchCheckFill className='experience__details-icon' />
                 <div>
-                  <h4>HTML</h4>
-                  <small className='text-light'>Experienced</small>
+                  <h4>{tech}</h4>
+                  <small className='text-light'>{level}</small>
                 </div>
               </article>
-              <article className='experience__details'>
-                <BsFillPatchCheckFill className='experience__details-icon'/>
-                <div>
-                  <h4>CSS</h4>
-                  <small className='text-light'>Intermediate</small>
-                </div>
-              </article>
-              <article className='experience__details'>
-                <BsFillPatchCheckFill className='experience__details-icon'/>
-                <div>
-                  <h4>JavaScript</h4>
-                  <small className='text-light'>Intermediate</small>
-                </div>
-              </article>
-              <article className='experience__details'>
-                <BsFillPatchCheckFill className='experience__details-icon'/>
-                <div>
-                  <h4>Bootstrap</h4>
-                  <small className='text-light'>Beginner</small>
-                </div>
-              </article>
-              <article className='experience__details'>
-                <BsFillPatchCheckFill className='experience__details-icon'/>
-                <div>
-                  <h4>ReactJs</h4>
-                  <small className='text-light'>Beginner</small>
-                </div>
-              </article>
-            </div>
+            ))}
+          </div>
         </div>
 
-        <div className="experience__backend">
-            <h3>Backend Development</h3>
-            <div className="experience__content">
-
-              <article className='experience__details'>
-                <BsFillPatchCheckFill className='experience__details-icon'/>
+        <div className='experience__backend'>
+          <h3>Backend Development</h3>
+          <div className='experience__content'>
+            {[
+              { tech: 'Node.js', level: 'Experienced' },
+              { tech: 'Express.js', level: 'Experienced' },
+              { tech: 'Python', level: 'Intermediate' },
+              { tech: 'Java', level: 'Intermediate' },
+              { tech: 'MySQL', level: 'Intermediate' },
+              { tech: 'PostgreSQL', level: 'Intermediate' },
+              { tech: 'MongoDB', level: 'Experienced' },
+              { tech: 'Firebase', level: 'Beginner' }
+            ].map(({ tech, level }) => (
+              <article className='experience__details' key={tech}>
+                <BsFillPatchCheckFill className='experience__details-icon' />
                 <div>
-                  <h4>Node Js</h4>
-                  <small className='text-light'>Experienced</small>
+                  <h4>{tech}</h4>
+                  <small className='text-light'>{level}</small>
                 </div>
               </article>
-              <article className='experience__details'>
-                <BsFillPatchCheckFill className='experience__details-icon'/>
-                <div>
-                  <h4>MySQL</h4>
-                  <small className='text-light'>Intermediate</small>
-                </div>
-              </article>
-              <article className='experience__details'>
-                <BsFillPatchCheckFill className='experience__details-icon'/>
-                <div>
-                  <h4>MongoDB</h4>
-                  <small className='text-light'>Experienced</small>
-                </div>
-              </article>
-              <article className='experience__details'>
-                <BsFillPatchCheckFill className='experience__details-icon'/>
-                <div>
-                  <h4>Java</h4>
-                  <small className='text-light'>Intermediate</small>
-                </div>
-              </article>
-            </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;
